@@ -26,6 +26,7 @@
     "@radix-ui/react-separator": "latest",
     "@radix-ui/react-slot": "latest",
     "@radix-ui/react-tabs": "latest",
+    "@tailwindcss/postcss": "^4.1.16",
     "ai": "^4.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
