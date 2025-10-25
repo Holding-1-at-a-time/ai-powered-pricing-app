@@ -8,15 +8,22 @@
  * @module
  */
 
-import type * as auth from "../auth.js"
-import type * as bookings from "../bookings.js"
-import type * as http from "../http.js"
-import type * as pricing from "../pricing.js"
-import type * as services from "../services.js"
-import type * as users from "../users.js"
-import type * as vehicles from "../vehicles.js"
-
-import type { ApiFromModules, FilterApi, FunctionReference } from "convex/server"
+import type {
+  ApiFromModules,
+  FilterApi,
+  FunctionReference,
+} from "convex/server";
+import type * as bookings from "../bookings.js";
+import type * as crons from "../crons.js";
+import type * as http from "../http.js";
+import type * as jobs_pricingUpdates from "../jobs/pricingUpdates.js";
+import type * as notifications from "../notifications.js";
+import type * as pricing from "../pricing.js";
+import type * as seed from "../seed.js";
+import type * as services from "../services.js";
+import type * as users from "../users.js";
+import type * as vehicles from "../vehicles.js";
+import type * as workflows_bookingWorkflow from "../workflows/bookingWorkflow.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -26,28 +33,24 @@ import type { ApiFromModules, FilterApi, FunctionReference } from "convex/server
  * const myFunctionReference = api.myModule.myFunction;
  * ```
  */
-export const api: FilterApi<
-  ApiFromModules<{
-    auth: typeof auth
-    bookings: typeof bookings
-    http: typeof http
-    pricing: typeof pricing
-    services: typeof services
-    users: typeof users
-    vehicles: typeof vehicles
-  }>,
+declare const fullApi: ApiFromModules<{
+  bookings: typeof bookings;
+  crons: typeof crons;
+  http: typeof http;
+  "jobs/pricingUpdates": typeof jobs_pricingUpdates;
+  notifications: typeof notifications;
+  pricing: typeof pricing;
+  seed: typeof seed;
+  services: typeof services;
+  users: typeof users;
+  vehicles: typeof vehicles;
+  "workflows/bookingWorkflow": typeof workflows_bookingWorkflow;
+}>;
+export declare const api: FilterApi<
+  typeof fullApi,
   FunctionReference<any, "public">
-> = null as any
-
-export const internal: FilterApi<
-  ApiFromModules<{
-    auth: typeof auth
-    bookings: typeof bookings
-    http: typeof http
-    pricing: typeof pricing
-    services: typeof services
-    users: typeof users
-    vehicles: typeof vehicles
-  }>,
+>;
+export declare const internal: FilterApi<
+  typeof fullApi,
   FunctionReference<any, "internal">
-> = null as any
+>;
