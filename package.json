@@ -1,0 +1,45 @@
+{
+  "name": "auto-detailing-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.0.0",
+    "@ai-sdk/provider-utils": "latest",
+    "@auth0/auth0-react": "latest",
+    "@clerk/clerk-react": "latest",
+    "@clerk/nextjs": "latest",
+    "@convex-dev/agent": "latest",
+    "@convex-dev/rag": "latest",
+    "@convex-dev/workflow": "latest",
+    "@convex-dev/workpool": "latest",
+    "ai": "^4.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "convex": "latest",
+    "convex-helpers": "latest",
+    "date-fns": "latest",
+    "lucide-react": "^0.454.0",
+    "next": "15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "latest",
+    "svix": "latest",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "tw-animate-css": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8.5",
+    "tailwindcss": "4.1.16",
+    "typescript": "^5"
+  }
+}
