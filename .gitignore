@@ -31,3 +31,5 @@ next-env.d.ts
 .github\instructions\codacy.instructions.md
 
 .early.coverage
+# clerk configuration (can include secrets)
+/.clerk/
